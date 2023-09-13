@@ -11,17 +11,18 @@ public void draw() {
   for(int w = 1000 ; w >= 0 ; w -=25 )
   {
     //use randomly selected shade of purple
-   if (Math.random() < 0.25) {
+double v = Math.random();
+   if (v < 0.25) {
     fill(204, 153, 255);
-  } else if (Math.random() < 0.5) {
+  } else if (v < 0.5) {
      fill(64, 0, 128);
-  } else if (Math.random() < 0.75) {
+  } else if (v < 0.75) {
      fill(57, 0, 77);
   } else {
      fill(198, 26, 255);
   } 
   //adds slight variation to scale position
-    float z = w + (float) Math.random();
+    double z = w + Math.random();
     if (z >= w + 0.5){
       w = w + 1;
     }
